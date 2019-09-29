@@ -10,8 +10,8 @@ class ExceptionsTest {
 	
 	//1. This is an example of how one might test that an exception is thrown.
 	//   It tests that an IndexOutOfBoundsException is thrown 
-	@Test
-	public void testIndexOOBException() {
+	//@Test
+	/*public void testIndexOOBException() {
 		int[] vars = {0, 1, 2, 3};
 			
 		try {
@@ -23,7 +23,7 @@ class ExceptionsTest {
 			e.printStackTrace();
 			assertArrayEquals(vars, new int[] {4, 1, 2, 3});
 		}
-	}
+	}*/
 	
 	//2. In the ExceptionMethods class, write a method called divide that takes
 	//   two doubles as parameters and returns their quotient as a double. This method 
@@ -32,7 +32,10 @@ class ExceptionsTest {
 	//3. Complete the JUnit test method to test the divide method.
 	@Test
 	public void testDivideByZeroException() {
-		
+		ExceptionMethods em = new ExceptionMethods();
+		em.divide(3,0.0);
+		em.divide(6,0.0);
+		em.divide(7,0.0);
 	}
 	
 	//4. In the ExceptionMethods class, write a method called reverseString that takes a
